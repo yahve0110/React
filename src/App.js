@@ -1,14 +1,16 @@
 import './App.css';
-import Header from './components/Header/Header';
-import Technologies from './components/Technologies/Technologies';
-import Footer from './components/Footer/Footer';
+import Header from './components/Header/Header.module';
+import Navbar from './components/Nav/Navbar';
+import Profile from './components/Profile/MyPosts/MyPosts';
+
 
 const  App = () => {
   return (
-    <div className="App">
-      < Header />
-      < Technologies />
-      <Footer />
+    <div className="app-wrapper">
+    <Header />
+    <Navbar />
+    <Profile />
+ 
     </div>
   );
 }
