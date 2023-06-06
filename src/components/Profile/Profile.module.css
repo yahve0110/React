@@ -1,7 +1,4 @@
 .content{
-    grid-area: c;
-    background-color: rgb(245, 245, 245);
-  
-  }
-
-
+  font-size: 60px;
+  color:white
+}

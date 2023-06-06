@@ -1,15 +1,27 @@
 .nav{
     grid-area: n;
     background-color: rgb(161, 55, 202);
-    padding-top: 20px;
+    padding-top: 25px;
+    height: 91.5vh;
     
     }
 
 
-nav a{
+.item a{
     padding-left: 10px;
     color: white;
     text-decoration:none ;
-    font-size: 24px;
-    line-height: 40px;
+    font-size: 30px;
+    line-height: 60px;
+}
+
+.item a.active{
+    color: Black;
+    font-size: 32px;
+}
+
+a:hover{
+    color:red;
+    font-size: 30px;
+    
 }
