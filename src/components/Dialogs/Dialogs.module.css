@@ -1,4 +1,26 @@
-.content{
-    font-size: 60px;
-    color:white
+
+
+.dialogs{
+    font-size: 40px;
+    color:white;
+    display: grid;
+    grid-template-columns: 2fr 10fr;
+    padding-top: 20px;
+    line-height: 140px;
+}
+
+.dialogsItems{
+ padding: 10px;
+ color: white;
+}
+
+
+
+.messages{
+   padding: 10px;
+
+}
+
+.message{
+    color: white;
 }
