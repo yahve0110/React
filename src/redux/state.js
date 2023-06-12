@@ -1,17 +1,7 @@
-// //data
-// let posts = [
-  
-//   ]
-  
-  
-//   let dialogs = [
 
-//   ]
-  
-//   let messagesData = [
-    
-//   ]
-  
+  let rerenderEntireTree = ()=>{
+    console.log('stae change')
+  }
 
   let state = {
     profilePage:{
@@ -19,6 +9,7 @@
         {id:2,message:"It is my first post",likesCount:15,},
         {id:3,message:"hi from index",likesCount:22,},
         {id:4,message:" third",likesCount:5,}],
+        newPostText : 'testim posti',
        
     },
     messagesPage:{
@@ -33,5 +24,28 @@
     }
    
   }
+
+
+export let addPost = () =>{
+ let newPost ={
+    id:5,
+    message: state.profilePage.newPostText,
+    likesCount:0
+  }
+  state.profilePage.posts.push(newPost)
+  state.profilePage.newPostText = ''
+  rerenderEntireTree(state)
+}
+
+
+
+export let updateNewPostText = (newText) =>{
+  state.profilePage.newPostText = newText
+  rerenderEntireTree(state)
+ }
+
+ export const subscribe = (observer) =>{
+  rerenderEntireTree = observer
+ }
 
   export default state

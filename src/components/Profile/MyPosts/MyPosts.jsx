@@ -12,7 +12,18 @@ console.log(props)
 
   let newPosts = props.posts.map(post => <Post message={post.message} like={post.likesCount} />);
 
+  let newPostElement = React.createRef()
 
+ let addPost = () =>{
+  let text = newPostElement.current.value;
+  props.addPost(text)
+
+ }
+
+ let onPostChange = () =>{
+let text = newPostElement.current.value
+props.updateNewPostText(text)
+ }
 
   return (
     <div className={classes.content}>
@@ -20,10 +31,10 @@ console.log(props)
       <div className={classes.dialogs}>
         My Posts
         <div>
-          <textarea name="" id="" cols="30" rows="10"></textarea>
+          <textarea name="" id="" onChange={onPostChange} ref ={newPostElement} value={props.newPostText} cols="40" rows="5"></textarea>
         </div>
         <div>
-          <button>Add Post</button>
+          <button onClick={addPost}>Add Post</button>
         </div>
         <div>New Posts</div>
     

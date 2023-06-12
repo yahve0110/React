@@ -24,6 +24,12 @@ let dialogsElements = props.dialogs.map((dialog)=>{
 
 let messagesElements = props.messagesData.map(message =><Message message = {message.message} /> )
 
+let  newMsg = React.createRef() 
+
+const addNewMsg = () =>{
+let text = newMsg.current.value
+alert(text)
+}
 
   //return jsx
   return (
@@ -38,7 +44,8 @@ let messagesElements = props.messagesData.map(message =><Message message = {mess
       <div className={s.messages}>
     
       {messagesElements}
-    
+      <textarea name="" id="" ref={newMsg} cols="30" rows="10"></textarea>
+      <button onClick = {addNewMsg}>Add</button>
           
       </div>
     </div>
